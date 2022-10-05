@@ -24,8 +24,7 @@ namespace PageObjectModel
         private IWebElement inputPasswordAuthorizationn => driver.FindElement(By.Id("passwd"));
         private IWebElement linkPasswordRecovery => driver.FindElement(By.LinkText("Forgot your password?"));
         private IWebElement buttonSignIn => driver.FindElement(By.Id("SubmitLogin"));
-        /*private IWebElement errorAuthFailed => driver.FindElement(By.CssSelector("#center_column > div.alert.alert-danger > ol > li"));*/
-
+       
 
         public void InsertEmailInInput(string text) => inputEmailAddressAuthorization.SendKeys(text);
         public void InsertPasswordlInInput(string text) => inputPasswordAuthorizationn.SendKeys(text);
@@ -35,6 +34,4 @@ namespace PageObjectModel
         public string CheckHeaderRegistrationText() => headRegistredAccount.Text;
         public string CheckButtonCreateAccountText() => buttontCreateAccount.Text;
     }
-
 }
-

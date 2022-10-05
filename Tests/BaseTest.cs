@@ -6,10 +6,10 @@ namespace Tests
 {
     public class BaseTest
     {
-        protected IWebDriver driver;//driver = accessible for methods, protected = accessible only for child class(test)
+        protected IWebDriver driver;
 
         [SetUp]
-        public void SetUp() //method
+        public void SetUp()
         {
             driver = new ChromeDriver();
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
