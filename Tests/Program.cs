@@ -10,17 +10,17 @@ namespace Tests
         {
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
 
+
             var initPage = new InitPage(driver);
             initPage.ClickSignIn();
 
+
             var loginPage = new SigninPage(driver);
-            
 
             loginPage.InsertEmailInInput("user@gmail.com");
             loginPage.InsertPasswordlInInput("123456");
             loginPage.ClickSignInButton();
             
-
             var actualParagraphCreateAccount = loginPage.CheckParagraphCreateAccountText();
             var expectedParagraphCreateAccount = "Please enter your email address to create an account.";
             Assert.AreEqual(expectedParagraphCreateAccount, actualParagraphCreateAccount);
