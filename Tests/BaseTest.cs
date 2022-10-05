@@ -18,7 +18,7 @@ namespace Tests
         [TearDown]
         public void TearDown()
         {
-            driver.Close();
+            driver.Quit();
         }
     }
 }

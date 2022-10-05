@@ -1,12 +1,10 @@
-﻿
-
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace PageObjectModel
 {
-    public class LoginPage : BasePage
+    public class SigninPage : BasePage
     {
-        public LoginPage(IWebDriver driver) : base(driver)
+        public SigninPage(IWebDriver driver) : base(driver)
         {
 
         }
@@ -26,13 +24,17 @@ namespace PageObjectModel
         private IWebElement inputPasswordAuthorizationn => driver.FindElement(By.Id("passwd"));
         private IWebElement linkPasswordRecovery => driver.FindElement(By.LinkText("Forgot your password?"));
         private IWebElement buttonSignIn => driver.FindElement(By.Id("SubmitLogin"));
-        private IWebElement errorAuthFailed => driver.FindElement(By.CssSelector("#center_column > div.alert.alert-danger > ol > li"));
+        /*private IWebElement errorAuthFailed => driver.FindElement(By.CssSelector("#center_column > div.alert.alert-danger > ol > li"));*/
+
 
         public void InsertEmailInInput(string text) => inputEmailAddressAuthorization.SendKeys(text);
         public void InsertPasswordlInInput(string text) => inputPasswordAuthorizationn.SendKeys(text);
         public void ClickSignInButton() => buttonSignIn.Click();
         //public string GetErrorMessage() => errorAuthFailed.Text;
-        public string
+        public string CheckParagraphCreateAccountText() => paragraphCreateAnAccount.Text;
+        public string CheckHeaderRegistrationText() => headRegistredAccount.Text;
+        public string CheckButtonCreateAccountText() => buttontCreateAccount.Text;
     }
+
 }
 
