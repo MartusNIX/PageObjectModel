@@ -8,16 +8,18 @@ namespace Tests
         [Test]
         public void PageTests()
         {
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+
             var initPage = new InitPage(driver);
             initPage.ClickSignIn();
 
             var loginPage = new SigninPage(driver);
-            Thread.Sleep(500);
+            
 
             loginPage.InsertEmailInInput("user@gmail.com");
             loginPage.InsertPasswordlInInput("123456");
             loginPage.ClickSignInButton();
-            Thread.Sleep(1000);
+            
 
             var actualParagraphCreateAccount = loginPage.CheckParagraphCreateAccountText();
             var expectedParagraphCreateAccount = "Please enter your email address to create an account.";
