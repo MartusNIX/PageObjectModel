@@ -29,7 +29,6 @@ namespace PageObjectModel
         public void InsertEmailInInput(string text) => inputEmailAddressAuthorization.SendKeys(text);
         public void InsertPasswordlInInput(string text) => inputPasswordAuthorizationn.SendKeys(text);
         public void ClickSignInButton() => buttonSignIn.Click();
-        //public string GetErrorMessage() => errorAuthFailed.Text;
         public string CheckParagraphCreateAccountText() => paragraphCreateAnAccount.Text;
         public string CheckHeaderRegistrationText() => headRegistredAccount.Text;
         public string CheckButtonCreateAccountText() => buttontCreateAccount.Text;
