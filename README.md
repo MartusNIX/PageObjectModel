@@ -1,6 +1,8 @@
-# PageObjectModel http://automationpractice.com/ 
+# PageObjectModel 
 
-Добавить локаторы на все основные элементы(тайтлы, поля, кнопки)
-Написать методы, возвращающие текстовые значения из: "Please enter your email address to create an account.", "Already registered?" и кнопки "Create an account" (для наглядности выводим значения на экран)
-Написать метод который вводит переданные в данный метод значения в поля "Email address" и "Password" и после кликает по кнопке "Sign in".
-Добавить класс Program в котором выполняем все написанные методы.
+1) https://github.com/MartusNIX/PageObjectModel/blob/e6db12ff6d885cf5fc6ef85fb09902d12ace1208/PageObjectModel/SigninPage.cs
+   Created all required elements by locators.
+   
+   
+2)https://github.com/MartusNIX/PageObjectModel/blob/e6db12ff6d885cf5fc6ef85fb09902d12ace1208/Tests/Program.cs
+   Created test for required elements.
