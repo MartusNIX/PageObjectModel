@@ -8,12 +8,8 @@ namespace Tests
         [Test]
         public void PageTests()
         {
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
-
-
             var initPage = new InitPage(driver);
             initPage.ClickSignIn();
-
 
             var loginPage = new SigninPage(driver);
 

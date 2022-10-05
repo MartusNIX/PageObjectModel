@@ -13,6 +13,7 @@ namespace Tests
         {
             driver = new ChromeDriver();
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
         }
 
         [TearDown]
